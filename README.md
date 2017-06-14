@@ -6,3 +6,4 @@ sample spring boot
 * Maven build file
 * Pebble Teplate View Engine
 * Bootstrap
+* Swagger

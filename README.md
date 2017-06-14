@@ -1,6 +1,7 @@
 # Sales_sample
 sample spring boot
 
-# Includes
-Embedded tomcat server
-Gradle build file
+## Includes
+* Embedded tomcat server
+* Maven build file
+* Pebble Teplate View Engine

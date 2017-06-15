@@ -6,4 +6,4 @@ sample spring boot
 * Maven build file
 * Pebble Teplate View Engine
 * Bootstrap
-* Swagger
+* Swagger(http://localhost:8080/swagger-ui.html)

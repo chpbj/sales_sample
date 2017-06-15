@@ -21,12 +21,12 @@ public class MemberController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Member> list() throws Exception {
         return memberservice.findAll();
     }
 
-    @RequestMapping(value = "/join", method = RequestMethod.POST)
+    @RequestMapping(value = "/join", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public Member join(@RequestParam String id, @RequestParam String name) throws Exception {
         MemberId memberId = new MemberId(id);
 
@@ -35,9 +35,9 @@ public class MemberController {
         return memberservice.findById(memberId);
     }
 
-    @RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-    public Member view(@PathVariable String userId) throws Exception {
-        return memberservice.findById(new MemberId(userId));
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Member view(@PathVariable String id) throws Exception {
+        return memberservice.findById(new MemberId(id));
     }
 
     @Autowired
